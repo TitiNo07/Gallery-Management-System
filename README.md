@@ -19,12 +19,13 @@ A Java application for managing a gallery's collection of artworks and artists. 
 
    ```bash
    javac *.java
+   ```
 
 2.  **Run Main**
    
    ```bash
    java Main
-
+   ```
 
 ## Data Persistence
 - The application saves and loads data from `data/gallery_data.txt`.
