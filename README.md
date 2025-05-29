@@ -1,18 +1,36 @@
-## Getting Started
+# Gallery Exhibition Management System
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+A Java application for managing a gallery's collection of artworks and artists. The system allows you to add, edit, search, and organize artworks by author, genre, and date, with storage to file.
 
-## Folder Structure
+## Features
+- Add, edit, and delete artworks and artists
+- Search artworks by author or name
+- Sort artworks by creation date
+- Save and load gallery data from file
+- Simple and intuitive GUI
 
-The workspace contains two folders by default, where:
+## Requirements
+- **JDK 22** (Java Development Kit)
+- Java compiler: `javac` (from JDK 22)
+- Operating System: Windows, macOS, or Linux
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## How to Build and Run
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+1. **Compile the project**:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+   ```bash
+   javac *.java
 
-## Dependency Management
+2.  **Run Main**
+   
+   ```bash
+   java Main
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Data Persistence
+- The application saves and loads data from `data/gallery_data.txt`.
+
+## Author
+- Name: **Konstantin Bozhkov**
+
+---
+*Developed as a programming project for 2024-2025.*
