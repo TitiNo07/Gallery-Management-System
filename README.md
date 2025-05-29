@@ -17,15 +17,15 @@ A Java application for managing a gallery's collection of artworks and artists. 
 
 1. **Compile the project**:
 
-   ```bash
-   javac *.java
-   ```
+    ```bash
+    javac *.java
+    ```
 
 2.  **Run Main**
    
-   ```bash
-   java Main
-   ```
+    ```bash
+    Main.java
+    ```
 
 ## Data Persistence
 - The application saves and loads data from `data/gallery_data.txt`.
