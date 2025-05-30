@@ -22,7 +22,6 @@ public class ExhibitionManager {
     }
 
     public boolean addArtwork(Artwork artwork) {
-        // Check for duplicates
         ArrayList<Artwork> existing;
         if (artworksByAuthor.containsKey(artwork.getAuthor().getName())) {
             existing = artworksByAuthor.get(artwork.getAuthor().getName());
@@ -33,7 +32,6 @@ public class ExhibitionManager {
             if (a.equals(artwork)) return false;
         }
 
-        // Add to artist
         Artist artist = getArtistByName(artwork.getAuthor().getName());
         if (artist == null) {
             artist = artwork.getAuthor();
@@ -41,7 +39,6 @@ public class ExhibitionManager {
         }
         artist.addArtwork(artwork);
 
-        // Add to genre map
         ArrayList<Artwork> genreList = artworksByGenre.get(artwork.getGenre());
         if (genreList == null) {
             genreList = new ArrayList<>();
@@ -49,7 +46,6 @@ public class ExhibitionManager {
         }
         genreList.add(artwork);
 
-        // Add to author map
         ArrayList<Artwork> authorList = artworksByAuthor.get(artist.getName());
         if (authorList == null) {
             authorList = new ArrayList<>();

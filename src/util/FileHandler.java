@@ -13,7 +13,7 @@ public class FileHandler {
         File file = new File(path);
         File parentDir = file.getParentFile();
         if (parentDir != null && !parentDir.exists()) {
-            parentDir.mkdirs(); // Създава папката ако я няма
+            parentDir.mkdirs();
         }
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(file))) {

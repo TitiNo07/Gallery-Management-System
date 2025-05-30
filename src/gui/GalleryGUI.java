@@ -53,7 +53,7 @@ public class GalleryGUI extends JFrame {
         int result = fileChooser.showOpenDialog(this);
         if (result == JFileChooser.APPROVE_OPTION) {
         File selectedFile = fileChooser.getSelectedFile();
-        manager = new ExhibitionManager(); // нов обект, за да не се дублира
+        manager = new ExhibitionManager();
         FileHandler.loadFromFile(manager, selectedFile.getAbsolutePath());
         refreshTable();
         }
@@ -70,6 +70,30 @@ public class GalleryGUI extends JFrame {
         topPanel.add(openFileBtn);
 
         add(topPanel, BorderLayout.NORTH);
+
+        Color background = new Color(255, 255 , 255); 
+        Color panelColor = new Color(255, 255, 255); 
+        Color buttonColor = new Color(242, 112, 0); 
+        Color buttonText = Color.BLACK;
+        Color tableHeader = new Color(3, 156, 221);
+        Color tableRow = new Color(240, 248, 255); 
+
+        getContentPane().setBackground(background);
+        topPanel.setBackground(panelColor);
+        table.setBackground(tableRow);
+        table.setForeground(Color.DARK_GRAY);
+        table.setSelectionBackground(new Color(0, 196, 222));
+        table.getTableHeader().setBackground(tableHeader);
+        table.getTableHeader().setForeground(Color.WHITE);
+        table.getTableHeader().setFont(table.getTableHeader().getFont().deriveFont(Font.BOLD));
+
+        JButton[] buttons = {searchBtn, addBtn, editBtn, deleteBtn, saveBtn, loadBtn, openFileBtn};
+        for (JButton btn : buttons) {
+            btn.setBackground(buttonColor);
+            btn.setForeground(buttonText);
+            btn.setFocusPainted(false);
+            btn.setBorder(BorderFactory.createEmptyBorder(5, 15, 5, 15));
+        }
     }
 
     private void search() {
@@ -95,7 +119,7 @@ public class GalleryGUI extends JFrame {
         panel.add(new JLabel("Name:")); panel.add(name);
         panel.add(new JLabel("Author:")); panel.add(author);
         panel.add(new JLabel("Nationality:")); panel.add(nationality);
-        panel.add(new JLabel("Author:")); panel.add(genre);
+        panel.add(new JLabel("Genre:")); panel.add(genre);
         panel.add(new JLabel("Date (YYYY-MM-DD):")); panel.add(date);
 
         int result = JOptionPane.showConfirmDialog(this, panel, "Add artwork", JOptionPane.OK_CANCEL_OPTION);
