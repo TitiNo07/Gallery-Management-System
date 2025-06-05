@@ -48,7 +48,7 @@ public class GalleryGUI extends JFrame {
         JButton addBtn = new JButton("Add");
         JButton editBtn = new JButton("Edit");
         JButton deleteBtn = new JButton("Delete");
-        JButton saveBtn = new JButton("Write to file");
+        JButton saveBtn = new JButton("Save");
         JButton loadBtn = new JButton("Home");
         JButton openFileBtn = new JButton("Open");
         topPanel.add(loadBtn);
