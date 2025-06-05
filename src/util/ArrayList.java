@@ -3,7 +3,7 @@ package util;
 import java.util.Arrays;
 import java.util.Iterator;
 
-
+@SuppressWarnings("unchecked")
 public class ArrayList<E> implements Iterable<E> {
     private static final int INITIAL_CAPACITY = 10;
 
